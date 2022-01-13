@@ -25,7 +25,7 @@ public class UserDao {
 
         try (Connection connection = DbUtil.connect("workshop2")) {
             DbUtil.insertData(connection, "users", email, login, password);
-            System.out.println("New user added.");
+
         }
 
     }

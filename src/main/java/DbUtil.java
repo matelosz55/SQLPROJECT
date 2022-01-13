@@ -32,8 +32,9 @@ public class DbUtil {
             statement.setString(2, params[1]);
             statement.setString(3, params[2]);
             statement.executeUpdate();
+            System.out.println("New user added.");
         } catch (Exception e) {
-            e.printStackTrace();
+            System.out.println("User already exists in database.");
         }
     }
 
@@ -90,8 +91,9 @@ public class DbUtil {
             statement.setString(1, params[0]);
             statement.setInt(2, id);
             statement.executeUpdate();
+            System.out.println("User credentials udpated.");
         } catch (Exception e) {
-            e.printStackTrace();
+            System.out.println("User with this credentials already exists in database.");
         }
     }
 
